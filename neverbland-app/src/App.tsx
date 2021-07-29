@@ -4,6 +4,7 @@ import './App.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import MovieList from './MovieList';
 import Movie, { MovieProps } from './Movie';
+import './styles.scss';
 
 function App(): JSX.Element {
   const [movies, setMovies] = useState([]);

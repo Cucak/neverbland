@@ -13,9 +13,9 @@ type Movie = {
   premiered: string;
 };
 
-type Props = { movies: Array<Movie> };
+type MovieListProps = { movies: Array<Movie> };
 
-const MovieList: React.FC<Props> = ({ movies }: Props) => {
+const MovieList: React.FC<MovieListProps> = ({ movies }: MovieListProps) => {
   const [number, setNumber] = useState(20);
   return (
     <div id="home-view">
