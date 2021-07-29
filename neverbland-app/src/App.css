@@ -1,0 +1,268 @@
+#container {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+#home-view header{
+  background-color: #dbdbdb;
+  padding: 50px 50px 150px 50px;
+}
+
+#home-view p {
+  color: darkslategrey;
+}
+
+#home-view section {
+  padding: 50px;
+  margin-top: -150px;
+}
+
+#home-view button {
+  padding: 10px 16px;
+  background-color: black;
+  color: white;
+  border: 1px solid black;
+}
+
+#home-view button:hover {
+  background-color: transparent;
+  color: black;
+}
+
+#home-view .movie-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+#card {
+  position: relative;
+  max-width: 350px;
+  width: 32%;
+  margin-right: 1%;
+  margin-bottom: 20px;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0, 0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+}
+
+#card:last-of-type {
+  margin-right: 0px;
+}
+#card:hover {
+  box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2),
+      0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    cursor: pointer;
+}
+
+#card img:hover {
+  transform: scale(1.05);
+  transition: 0.3s ease;
+}
+
+#card .card-content {
+  padding: 1rem;
+  position: relative;
+}
+
+#card .card-title {
+  font-size: 1.2rem;
+}
+
+#card .img-wrapper {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+#card .img-wrapper img {
+  width: 100%;
+  transition: 0.3s ease;
+}
+
+#card .rating {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: -3rem;
+  right: 1rem;
+  width: 2rem;
+  height: 2rem;
+  /* border-radius: 50%; */
+  padding: 1.5rem;
+  background-color: goldenrod;
+  color: #000;
+  font-weight: 700;
+  clip-path: polygon(
+    50% 0%,
+    61% 35%,
+    98% 35%,
+    68% 57%,
+    79% 91%,
+    50% 70%,
+    21% 91%,
+    32% 57%,
+    2% 35%,
+    39% 35%
+  );
+}
+
+#movie-info {
+  padding: 50px;
+}
+
+#movie-info header {
+  display: flex;
+  justify-content: center;
+}
+
+#movie-info #card {
+  width: 100%;
+}
+
+#movie-info .description p {
+  width: 70%;
+  margin-top: 0px;
+}
+
+#movie-info #show-info {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+}
+#movi-info #show-info .left-column {
+  width: 50%;
+}
+
+#show-info .left-column {
+  width: 45%;
+  margin-right: 5%;
+}
+
+#show-info .left-column ul {
+  padding-left: 0px;
+}
+
+#show-info .left-column li {
+  /* border-bottom: 1px solid grey;
+  padding-bottom: 15px;
+  margin-bottom: 25px;
+  list-style: none; */
+  display: flex;
+  border-bottom: 1px solid grey;
+  padding-bottom: 15px;
+  margin-bottom: 25px;
+  list-style: none;
+}
+
+#show-info .craw-box-left {
+  /* display: flex;
+  border-bottom: 1px solid grey;
+  padding-bottom: 15px;
+  margin-bottom: 25px; */
+  width: 30%;
+}
+
+#show-info .craw-box-right {
+  /* display: flex;
+  border-bottom: 1px solid grey;
+  padding-bottom: 15px;
+  margin-bottom: 25px; */
+  width: 70%;
+}
+
+#show-info .right-column {
+  width: 50%;
+  padding-left: 0px;
+}
+
+#show-info .right-column li {
+  display: flex;
+  border-bottom: 1px solid grey;
+  padding-bottom: 15px;
+  margin-bottom: 25px;
+  list-style: none;
+}
+@media  screen and (max-width: 1200px) {
+  #rating {
+    width: 1rem;
+    height: 1rem;
+  }  
+}
+
+@media screen and (max-width: 992px) {
+  #movie-info header {
+    display: block;
+  }
+  #movie-info header #card {
+    width: 100%;
+    margin: auto;
+  }
+  #movie-info header .description {
+    margin-top: 5%;
+  }
+
+  #movie-info header .description p{
+    margin: auto;
+  }
+
+  #movie-info #show-info{
+    display: block;
+    width: 100%;
+  }
+
+  #movie-info #show-info h3{
+    margin-top: 5%;
+  }
+
+  #movie-info #show-info .left-column{
+    text-align: center;
+    width: 70%;
+    margin: auto;
+  }
+
+  #movie-info #show-info .right-column{
+    text-align: center;
+    width: 70%;
+    margin: auto;
+  }
+}
+@media screen and (max-width: 600px) {
+  #card {
+    width: 48%;
+  }
+  #home-view header {
+    padding: 20px;
+  }
+  #home-view section {
+    margin-top: auto;
+    padding: 20px;
+  }
+
+  #movie-info header .description p{
+    width: 100%;
+  }
+
+  #movie-info .show-info .left-column{
+    width: 100%;
+    text-align: left;
+  }
+
+  #movie-info .show-info .right-column{
+    width: 100%;
+    text-align: left;
+  }
+
+  #movie-info .show-info .right-column ul{
+    padding-left: 0px;
+  }
+
+  #movie-info .show-info .craw-box-left{
+    width: 50%
+  }
+
+  #movie-info .show-info .craw-box-right{
+    width: 50%
+  }
+}
