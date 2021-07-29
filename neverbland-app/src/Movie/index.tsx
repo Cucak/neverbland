@@ -54,6 +54,8 @@ const Movie: React.FC<Props> = ({ movie, getMovie, match }) => {
     if (match.params.id) {
       const res = await axios.get(`https://api.tvmaze.com/shows/${id}/cast`);
       if (res.data) {
+        console.log(res.data);
+
         setCraw(res.data);
       }
     }
@@ -110,30 +112,38 @@ const Movie: React.FC<Props> = ({ movie, getMovie, match }) => {
               <div className="right-column">
                 <h3>Starring</h3>
                 <ul>
-                  <li>
-                    <div className="craw-box-left">{craw[0].person.name}</div>
-                    <div className="craw-box-right">
-                      {craw[0].character.name}
-                    </div>
-                  </li>
-                  <li>
-                    <div className="craw-box-left">{craw[1].person.name}</div>
-                    <div className="craw-box-right">
-                      {craw[1].character.name}
-                    </div>
-                  </li>
-                  <li>
-                    <div className="craw-box-left">{craw[2].person.name}</div>
-                    <div className="craw-box-right">
-                      {craw[2].character.name}
-                    </div>
-                  </li>
-                  <li>
-                    <div className="craw-box-left">{craw[3].person.name}</div>
-                    <div className="craw-box-right">
-                      {craw[3].character.name}
-                    </div>
-                  </li>
+                  {craw[0] ? (
+                    <li>
+                      <div className="craw-box-left">{craw[0].person.name}</div>
+                      <div className="craw-box-right">
+                        {craw[0].character.name}
+                      </div>
+                    </li>
+                  ) : null}
+                  {craw[1] ? (
+                    <li>
+                      <div className="craw-box-left">{craw[1].person.name}</div>
+                      <div className="craw-box-right">
+                        {craw[1].character.name}
+                      </div>
+                    </li>
+                  ) : null}
+                  {craw[2] ? (
+                    <li>
+                      <div className="craw-box-left">{craw[2].person.name}</div>
+                      <div className="craw-box-right">
+                        {craw[2].character.name}
+                      </div>
+                    </li>
+                  ) : null}
+                  {craw[3] ? (
+                    <li>
+                      <div className="craw-box-left">{craw[3].person.name}</div>
+                      <div className="craw-box-right">
+                        {craw[3].character.name}
+                      </div>
+                    </li>
+                  ) : null}
                 </ul>
               </div>
             )}

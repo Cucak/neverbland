@@ -101,7 +101,7 @@
 
 #movie-info header {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 #movie-info #card {
@@ -164,7 +164,7 @@
     list-style: none;
 }
 @media screen and (max-width: 1200px) {
-    #rating {
+    #movie-info .rating {
         width: 1rem;
         height: 1rem;
     }
@@ -186,22 +186,22 @@
         margin: auto;
     }
 
-    #movie-info #show-info {
+    #movie-info .show-info {
         display: block;
         width: 100%;
     }
 
-    #movie-info #show-info h3 {
+    #movie-info .show-info h3 {
         margin-top: 5%;
     }
 
-    #movie-info #show-info .left-column {
+    #movie-info .show-info .left-column {
         text-align: center;
         width: 70%;
         margin: auto;
     }
 
-    #movie-info #show-info .right-column {
+    #movie-info .show-info .right-column {
         text-align: center;
         width: 70%;
         margin: auto;
